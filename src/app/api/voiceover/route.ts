@@ -11,7 +11,7 @@ const s3Client = new S3Client({
 
 async function generateVoiceover(text: string): Promise<string> {
   try {
-    const apiKey = process.env.ELEVENLABS_API_KEY || 'sk_540872f6e2e1a64ba6444148db1452c90090a66e7fc42354';
+    const apiKey = process.env.ELEVENLABS_API_KEY || '';
     
     const response = await fetch('https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM', {
       method: 'POST',
